@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Judul Halaman -->
+	<title>Orbit Future Academy</title>
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Icon -->
+	<link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+	
+	<!-- CSS -->
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/bootstrap.min.css') }} type="text/css">
+	<link rel="stylesheet" href={{ url_for('static', filename='/css/client_side.css') }}  type="text/css">
+	
+	<!-- JavaScript -->
+	<script src={{ url_for('static', filename='/js/jquery_3.6.0.min.js') }} ></script>
+	<script src={{ url_for('static', filename='/js/bootstrap_3.4.1.min.js') }} ></script>
+</head>
+
+<body id="halamanku" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+	<!-- Navigation Bar -->
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid navigasi">
+			
+			<!-- Logo -->
+			<div class="navbar-header">
+				<img src={{ url_for('static', filename='/images/orbit_logo.jpg') }} alt="Orbit Logo" 
+				width="50" height="50" align="left">
+				<a class="navbar-brand" href="#halamanku">&#160; Orbit Future Academy</a>
+			</div>
+			
+			<!-- Daftar Halaman -->
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right nav-teks">
+					<li><a href="#informasi">INFORMASI</a></li>
+					<li><a href="#aplikasi">APLIKASI</a></li>
+					<li><a href="#anggotaKelompok">ANGGOTA KELOMPOK</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<!-- Bagian Halaman (Informasi) -->
+	<div id="informasi" class="container-fluid informasi">
+		<div class="row">
+			<div class="col-sm-12 col-md-6 teks-ket">
+				<!-- Deskripsi Aplikasi -->
+				<h2>BST</h2>
+				<h4>Brain Stroke Classifier</h4><br>
+				<p style="text-align: justify;text-justify: inter-word;">
+					Stroke merupakan keadaan darurat medis.
+					Gejala stroke yaitu sulit berjalan, berbicara, dan memahami, serta kelumpuhan atau mati rasa pada wajah, lengan, atau tungkai.
+					Penanganan dini dengan obat-obatan seperti tPA (penghancur gumpalan darah) dapat meminimalkan kerusakan otak. Pengobatan lain berfokus dalam membatasi komplikasi dan mencegah stroke lainnya.
+				</p>
+				<br>
+
+				<!-- Tombol Mulai -->
+				<nav id="navgo" class="navbar" style="background-color:#000;z-index: 0;">
+					<ul class="nav nav-pills">
+						<li class="nav-item">
+							<a class="btn btn-default btn-lg tbl-mulai" href="#aplikasi" style="background-color:#ab34eb;">Mulai</a>
+						</li>
+					</ul>
+				</nav>
+			</div>
+			
+			<div class="col-sm-12 col-md-4">
+				<br>
+				<br>
+				<div class="img-brain-stroke">
+					<!-- Gambar Deskripsi Aplikasi -->
+					<img src={{ url_for('static', filename='/images/brain stroke.jpg') }} width="500" style="margin-top: 8rem;"></img>
+				</div>
+			</div>
+		</div>
+		<br>
+	</div>
+	
+	<!-- Bagian Halaman (Aplikasi) -->
+	<div id="aplikasi" data-bs-spy="scroll" data-bs-target="#navgo" data-bs-offset="0" class="scrollspy-example" tabindex="0">
+		<br>
+		<div class="row">
+			<div class="col-sm-6" style="border-right: 1px solid #ab34eb;">
+				</br>
+				<!-- Input Nilai Pengukuran dari Pengguna -->
+				<h3 style="margin: 5rem 0; font-size:3rem; font-weight:bold; text-align:center; transform: translateX(-3.5rem); font-style: italic;">Nilai Pengukuran </h3>
+				<form method="POST">
+					<div class="form-group" style="margin: 0 20px;">
+						<!-- Input Slider untuk Nilai Pengukuran Bunga Iris -->
+						<label for="range_gender">gender</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_gender" >0<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : Wanita
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								1 : Pria
+							</span>
+						</div>
+						<input type="range" min="0" max="1" step="1" value="0" class="slider" id="range_gender" 
+						onInput="$('#rangeVal_gender').html($(this).val())">
+						</br>
+						<label for="range_age">age</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_age">20<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								Rentang Umur
+							</span>
+						</div>
+						<input type="range" min="0" max="123" step="1" value="20" class="slider" id="range_age" 
+						onInput="$('#rangeVal_age').html($(this).val())">
+						</br>
+						<label for="range_hypertension">hypertension</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_hypertension">0<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : Tidak Menderita Hipertensi
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								1 : Menderita Hipertensi
+							</span>
+						</div>
+						<input type="range" min="0" max="1" step="1" value="0" class="slider" id="range_hypertension" 
+						onInput="$('#rangeVal_hypertension').html($(this).val())">
+						</br>
+						<label for="range_heart_disease">heart_disease</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_heart_disease">0<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : Tidak Terdapat Penyakit Jantung
+							</span>
+							&nbsp; &nbsp;				
+							<span>
+								1 : Terdapat Penyakit Jantung
+							</span>
+						</div>
+						<input type="range" min="0" max="1" step="1" value="0" class="slider" id="range_heart_disease" 
+						onInput="$('#rangeVal_heart_disease').html($(this).val())">
+						</br>
+						<label for="range_ever_married">ever_married</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_ever_married">0<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : Belum Menikah
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								1 : Sudah Menikah
+							</span>
+						</div>
+						<input type="range" min="0" max="1" step="1" value="0" class="slider" id="range_ever_married" 
+						onInput="$('#rangeVal_ever_married').html($(this).val())">
+						</br>
+						<label for="range_avg_glucose_level">avg_glucose_level</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_avg_glucose_level">125<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								Kadar Glukosa
+							</span>
+						</div>
+						<input type="range" min="0" max="500" step="1" value="125" class="slider" id="range_avg_glucose_level" 
+						onInput="$('#rangeVal_avg_glucose_level').html($(this).val())">
+						</br>
+						<label for="range_bmi">bmi</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_bmi">210<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								Indeks Massa Tubuh
+							</span>
+						</div>
+						<input type="range" min="0" max="635" step="1" value="210" class="slider" id="range_bmi" 
+						onInput="$('#rangeVal_bmi').html($(this).val())">
+						</br>
+						<label for="range_work_type">work_type</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_work_type">0<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : PNS
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								1 : Tidak Bekerja
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								2 : Privasi
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								3 : Wiraswasta
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								4 : Anak-anak
+							</span>
+						</div>
+						<input type="range" min="0" max="4" step="1" value="0" class="slider" id="range_work_type" 
+						onInput="$('#rangeVal_work_type').html($(this).val())">
+						</br>
+						<label for="range_Residence_type">residence_type</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_Residence_type">1<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : Pedesaan
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								1 : Perkotaan
+							</span>
+						</div>
+						<input type="range" min="0" max="1" step="1" value="1" class="slider" id="range_Residence_type" 
+						onInput="$('#rangeVal_Residence_type').html($(this).val())">
+						</br>
+						<label for="range_smoking_status">smoking_status</label>&nbsp;&rarr;&nbsp;
+						<span class="rangeVal_value" id="rangeVal_smoking_status">1<!-- Default value --></span>
+						<div style="border:1.5px solid #ab34eb; padding: 5px 8px; width: 90%; border-radius: 10px; margin-bottom: 1.5rem; background-color:#ab34eb; color:#ffffff; font-weight:500; 
+						display: flex; flex-direction: row; font-size: 1.6rem; justify-content:center;">
+							<span>
+								0 : Tidak Merokok
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								1 : Pernah Merokok
+							</span>
+							&nbsp; &nbsp;
+							<span>
+								2 : Perokok Berat
+							</span>
+						</div>
+						<input type="range" min="0" max="2" step="1" value="1" class="slider" id="range_smoking_status" 
+						onInput="$('#rangeVal_smoking_status').html($(this).val())">
+						</br>
+						<!-- Tombol Prediksi -->
+						<button type="submit" id="prediksi_submit" class="btn btn-default btn-lg">Prediksi</button>
+					</div>
+				</form>
+			</div>
+			<div class="col-sm-6">
+				<br>
+				<h3 style="margin: 5rem 0; font-size:3rem; font-weight:bold; text-align:center; transform: translateX(-1.2rem); font-style: italic;">Tes Prediksi </h3>
+				<!-- Bagian Halaman untuk Hasil Prediksi -->
+				<div id="hasil_prediksi" align="center">
+						<!-- Hasil Prediksi akan ditampilkan di sini-->
+				</div>
+			</div>
+		</div>
+		<br>
+		<br>
+	</div>
+
+	<!-- Bagian Halaman (Anggota Kelompok) -->
+	<div id="anggotaKelompok" class="container-fluid text-center halaman">
+		<br>
+		<h2 style="font-style: italic;">ANGGOTA KELOMPOK</h2>
+		<h4 style="letter-spacing: 3px;">ULAR - 4</h4>
+		<br>
+		<div class="row slideanim" style="width: 100%; padding:3rem 0;">
+			<div class="col-sm-4 identitas-anggota">
+				<div class="nama-anggota">
+					<img src="{{ url_for('static', filename='/images/AI_Ilham Pandu.JPG') }}" alt="Ilham Pandu" width="200px">
+				</div>
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<h4>Ilham Pandu Prasetyo</h4>
+				<p>Universitas Jember</p>
+			</div>
+			<div class="col-sm-4 identitas-anggota">
+				<div class="nama-anggota">
+					<img src="{{ url_for('static', filename='/images/AI_Lutfiah Tsani_.jpg') }}" alt="Lutfiah Tsani" width="200px">
+				</div>
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<h4>Lutfiah Tsani</h4>
+				<p>Universitas Aki</p>
+			</div>
+			<div class="col-sm-4 identitas-anggota">
+				<div class="nama-anggota">
+					<img src="{{ url_for('static', filename='/images/AI_Hafidh Soekma.jpg') }}" alt="Hafidh Soekma" width="200px">
+				</div>
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<h4>Hafidh Soekma Ardiansyah</h4>
+				<p>Universitas Negeri Surabaya</p>
+			</div>
+		</div>
+	    <div class="row slideanim" style="width: 100%; padding:3rem 0;">
+			<div class="col-sm-6 identitas-anggota" style="padding-top: 12rem;">
+				<span class="glyphicon glyphicon-user logo-small" style="margin-bottom: 3rem;"></span>
+				<h4 style="margin-top: 3rem;">Muhammad Andi Azriel Akbar</h4>
+				<p>Universitas Jember</p>
+			</div>
+			<div class="col-sm-6 identitas-anggota">
+				<div class="nama-anggota">
+					<img src="{{ url_for('static', filename='/images/AI_Muhammad Zakin Udin.JPG') }}" alt="Muhammad Zakin Udin" width="200px">
+				</div>
+				<!-- <span class="glyphicon glyphicon-user logo-small"></span> -->
+				<h4>Muhammad Zakin Udin</h4>
+				<p>Universitas Negeri Semarang</p>
+			</div>
+	    </div>
+	</div>
+
+	<!-- Footer -->
+	<footer class="container-fluid text-center">
+		<a href="#halamanku" title="To Top">
+			<span class="glyphicon glyphicon-chevron-up"></span>
+		</a>
+		<p>Orbit Future Academy <br> <a href="https://orbitfutureacademy.id/">orbitfutureacademy.id</a></p>
+	</footer>
+
+	<!-- JavaScript untuk Animasi Scroll dan Prediksi Model -->
+	<script  src={{ url_for('static', filename='/js/client_side.js') }}></script>
+
+</body>
+</html>
