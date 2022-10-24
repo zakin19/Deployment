@@ -23,6 +23,24 @@
        url('/fonts/glyphicons-halflings-regular.ttf') format('truetype')
 }
 
+
+::-webkit-scrollbar {
+	width: 3px;
+}
+
+::-webkit-scrollbar-track {
+	background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #ab34eb;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #cd71ff;
+} 
+
 body {
 	font: 400 15px Lato, sans-serif;
 	line-height: 1.8;
@@ -148,6 +166,15 @@ h4 {
 	color: #fff !important;
 }
 
+.container-fluid.navigasi .navbar-brand {
+	transition: 0.3s ease;
+}
+
+.container-fluid.navigasi .navbar-brand:hover {
+	letter-spacing: 3px;
+	transition: 0.3s ease;
+}
+
 .navbar-nav li a:hover, .navbar-nav li.active a {
 	color: #ab34eb !important;
 	background-color: #000 !important;
@@ -159,7 +186,8 @@ h4 {
 }
 
 #aplikasi {
-	height: 280vh;
+	/* height: 180vh; */
+	height: 300vh;
 	overflow: hidden;
 }
 
@@ -202,6 +230,7 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	/* height: 120vh; */
 	height: 180vh;
 }
 
@@ -357,16 +386,18 @@ footer a:focus {
 		transition: 0.3s ease;
 	}
 	#aplikasi {
-		height:300vh;
+		/* height:210vh; */
+		height:320vh;
 		overflow: hidden;
 	}
 	#hasil_prediksi {
-		height: 50vh;
+		height: 40vh;
 		padding-top: 3rem;
 		display:block;
 	}
 	#anggotaKelompok {
-		height: 320vh;
+		/* height: 240vh; */
+		height: 280vh;
 	}
 	#anggotaKelompok .identitas-anggota {
 		padding: 3rem 0;
