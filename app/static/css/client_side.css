@@ -186,8 +186,8 @@ h4 {
 }
 
 #aplikasi {
-	/* height: 180vh; */
-	height: 300vh;
+	height: 180vh;
+	/* height: 300vh; */
 	overflow: hidden;
 }
 
@@ -230,8 +230,8 @@ h4 {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	/* height: 120vh; */
-	height: 180vh;
+	height: 120vh;
+	/* height: 180vh; */
 }
 
 #prediksi_submit {
@@ -386,8 +386,8 @@ footer a:focus {
 		transition: 0.3s ease;
 	}
 	#aplikasi {
-		/* height:210vh; */
-		height:320vh;
+		height:210vh;
+		/* height:320vh; */
 		overflow: hidden;
 	}
 	#hasil_prediksi {
@@ -396,8 +396,8 @@ footer a:focus {
 		display:block;
 	}
 	#anggotaKelompok {
-		/* height: 240vh; */
-		height: 280vh;
+		height: 240vh;
+		/* height: 280vh; */
 	}
 	#anggotaKelompok .identitas-anggota {
 		padding: 3rem 0;
